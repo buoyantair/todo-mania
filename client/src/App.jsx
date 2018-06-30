@@ -5,6 +5,7 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 
 import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 import Login from "./Login.jsx";
 
 import "./App.sass";
@@ -14,18 +15,18 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 12
   }),
   content: {
-    display: 'grid',
-    gridTemplateColumns: '.3fr 1fr',
+    display: "grid",
+    gridTemplateColumns: ".3fr 1fr"
   },
   loginColumn: {
-    gridColumn: 1,
+    gridColumn: 1
   },
   dashboardColumn: {
-    gridColumn: 2,
+    gridColumn: 2
   },
   paper: {
     padding: theme.spacing.unit * 2,
-    minHeight: '500px',
+    minHeight: "500px",
     margin: theme.spacing.unit * 2
   }
 });
@@ -42,10 +43,11 @@ function App({ classes }) {
         </Grid>
         <Grid item className={classes.dashboardColumn}>
           <Paper className={classes.paper}>
-            <Typography>Helo</Typography>
+            <Typography>Hello</Typography>
           </Paper>
         </Grid>
       </Grid>
+      <Footer />
     </div>
   );
 }
